@@ -1,0 +1,18 @@
+{
+  "name": "file-handling",
+  "version": "1.0.0",
+  "description": "File handling example",
+  "main": "index.js",
+  "scripts": {
+    "lowcarb": "lowcarb"
+  },
+  "author": "Helio Frota",
+  "license": "MIT",
+  "dependencies": {
+    "graceful-fs": "^4.2.4",
+    "opossum": "^5.0.0"
+  },
+  "devDependencies": {
+    "lowcarb": "^0.1.0"
+  }
+}
