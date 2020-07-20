@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   breaker
     .fire('.\n')
     .then((result) => res.send(result))
-    .catch((err) => res.send(err));
+    .catch((err) => res.send(`* ${err}`));
 });
 
 function randomFailure(echo) {
