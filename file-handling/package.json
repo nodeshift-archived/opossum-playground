@@ -13,6 +13,6 @@
     "opossum": "^5.0.0"
   },
   "devDependencies": {
-    "lowcarb": "^0.1.0"
+    "lowcarb": "^0.3.1"
   }
 }
