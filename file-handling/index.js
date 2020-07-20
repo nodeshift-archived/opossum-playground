@@ -20,6 +20,8 @@ function fire() {
   // breaker.on('halfOpen', () => console.log(5));
   // breaker.on('close', () => console.log(6));
   // breaker.on('fallback', () => console.log(7));
+  console.log(breaker.stats);
+  return breaker.stats;
 }
 
 module.exports = {
