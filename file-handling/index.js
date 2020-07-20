@@ -8,7 +8,7 @@ const options = {};
 
 const breaker = new CircuitBreaker(readFile, options);
 
-function fire() {
+function firefox() {
   breaker.fire('./package.json', 'utf-8')
   .then()
   .catch(error => console.error(error));
@@ -25,5 +25,5 @@ function fire() {
 }
 
 module.exports = {
-  fire
+  firefox
 };
