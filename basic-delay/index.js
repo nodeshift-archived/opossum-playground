@@ -1,13 +1,23 @@
-const CircuitBreaker = require("opossum");
+const CircuitBreaker = require('opossum');
 
-const delay = (delay) => new Promise((resolve) => {
-  setTimeout(() => {
-    resolve();
-  }, delay);
-});
+const delay = (delay) =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, delay);
+  });
 
-const breaker = new CircuitBreaker(delay);
+const options = {};
 
-breaker.fire(2000).then(() => {
-  console.log(breaker.stats);
-});
+const breaker = new CircuitBreaker(delay, options);
+
+function go() {
+  breaker.fire(100)
+  .then()
+  .catch(error => console.error(error));
+  return breaker.stats;
+}
+
+module.exports = {
+  go
+};

@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "lowcarb"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "opossum": "^5.0.0"
+  },
+  "devDependencies": {
+    "lowcarb": "^0.4.1"
   }
 }
