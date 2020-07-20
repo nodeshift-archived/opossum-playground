@@ -3,4 +3,4 @@ const lowCarb = require('lowcarb');
 const fileHandling = require('../index.js');
 
 lowCarb.add(fileHandling.firefox, 10);
-lowCarb.run();
+lowCarb.run('a', true);
