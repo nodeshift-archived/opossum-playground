@@ -17,3 +17,13 @@ Result:
   go421 x 4,619 ops/sec ±4.78% (1000 runs sampled)
   go420 x 4,837 ops/sec ±3.50% (1000 runs sampled)
 ```
+
+
+Skipped the version 4.2.2 due an error found during the tests:
+
+```
+})(window, function() {
+   ^
+
+ReferenceError: window is not defined
+```
