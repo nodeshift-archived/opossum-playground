@@ -1,0 +1,21 @@
+{
+  "name": "two-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"node a.js\" \"node b.js\"",
+    "test": "./ab.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "opossum": "^5.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
