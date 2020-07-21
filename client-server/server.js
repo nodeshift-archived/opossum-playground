@@ -8,14 +8,21 @@ const app = express();
 
 app.get('/', (req, res) => {
   breaker
-    .fire('.\n')
-    .then((result) => res.send(result))
-    .catch((err) => res.send(`* ${err}`));
+    .fire('\n')
+    .then((result) => {
+      result += `success: ${breaker.stats.successes}`;
+      res.send(result);
+    })
+    .catch((err) => {
+      const { failures, fallbacks, rejects, timeouts } = breaker.stats;
+      err += `failures: ${failures}, fallbacks: ${fallbacks}, rejects: ${rejects}, timeouts: ${timeouts}`;
+      res.send(err);
+    });
 });
 
 function randomFailure(echo) {
   if (Date.now() % 5 === 0) {
-    return Promise.reject(new Error('Random failure'));
+    return Promise.reject('\n');
   } else {
     return Promise.resolve(echo);
   }
