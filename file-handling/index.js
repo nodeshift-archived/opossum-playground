@@ -9,10 +9,9 @@ const options = {};
 const breaker = new CircuitBreaker(readFile, options);
 
 function go() {
-  breaker.fire('./package.json', 'utf-8')
-  .then()
+  return breaker.fire('./package.json', 'utf-8')
+  .then(_ => breaker.stats)
   .catch(error => console.error(error));
-  return breaker.stats;
 }
 
 module.exports = {
