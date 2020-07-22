@@ -27,38 +27,33 @@ const b421 = new Cb421(delay, options);
 const b420 = new Cb420(delay, options);
 
 function go500() {
-  b500.fire(100)
-  .then()
+  return b500.fire(100)
+  .then(_ => b500.stats)
   .catch(error => console.error(error));
-  return b500.stats;
 }
 
 function go424() {
-  b424.fire(100)
-  .then()
+  return b424.fire(100)
+  .then(_ => b424.stats)
   .catch(error => console.error(error));
-  return b424.stats;
 }
 
 function go423() {
-  b423.fire(100)
-  .then()
+  return b423.fire(100)
+  .then(_ => b423.stats)
   .catch(error => console.error(error));
-  return b423.stats;
 }
 
 function go421() {
-  b421.fire(100)
-  .then()
+  return b421.fire(100)
+  .then(_ => b421.stats)
   .catch(error => console.error(error));
-  return b421.stats;
 }
 
 function go420() {
   b420.fire(100)
-  .then()
+  .then(_ => b420.stats)
   .catch(error => console.error(error));
-  return b420.stats;
 }
 
 
