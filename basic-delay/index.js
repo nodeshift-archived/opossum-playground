@@ -12,10 +12,9 @@ const options = {};
 const breaker = new CircuitBreaker(delay, options);
 
 function go() {
-  breaker.fire(100)
-  .then()
-  .catch(error => console.error(error));
-  return breaker.stats;
+  return breaker.fire(100)
+    .then(_ => breaker.stats)
+    .catch(error => console.error(error))
 }
 
 module.exports = {
