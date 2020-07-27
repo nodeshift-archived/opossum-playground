@@ -1,6 +1,6 @@
 const lowCarb = require('lowcarb');
 
-const clinet = require('../client');
+const client = require('../client');
 
-lowCarb.add(clinet.makeRequest, 100);
+lowCarb.add(client.makeRequest, 100);
 lowCarb.run('', false, true);
