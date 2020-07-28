@@ -4,9 +4,9 @@ This example shows how we can use opossum with a basic delay function (halts exe
 
 Steps:
 
-```
-npm install
-npm start
+```sh
+$ npm install
+$ npm start
 ```
 
 Result:
