@@ -1,6 +1,12 @@
-```
-npm install
-npm start
+# Opossum Last-Five Example
+
+This example uses the last five version of opossum on the same operation to detect different behaviors across versions (v4.2.2 skipped)
+
+### Steps
+
+```sh
+$ npm install
+$ npm start
 ```
 
 
