@@ -1,12 +1,21 @@
-```
-npm install
-npm start
+# Opossum Multiple-Express Example
+
+This example uses multiple express.js servers and a client to perform the requests. The opossum module is present only to the last express.js server in the chain.
+
+### Architecture
+client -> express (middleman) -> express (end)
+
+### Steps
+
+```sh
+$ npm install
+$ npm start
 ```
 
 Open a new terminal and run:
 
-```
-npm test
+```sh
+$ npm test
 ```
 
 Result: 

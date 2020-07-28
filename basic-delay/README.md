@@ -1,6 +1,12 @@
-```
-npm install
-npm start
+# Opossum Basic Delay
+
+This example shows how we can use opossum with a basic delay function (halts execution for 100ms) and test opossum under a heavy load using the lowcarb module.
+
+### Steps
+
+```sh
+$ npm install
+$ npm start
 ```
 
 Result:
