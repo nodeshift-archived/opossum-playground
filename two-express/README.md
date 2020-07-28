@@ -1,12 +1,18 @@
-```
-npm install
-npm start
+# Opossum Two-Express Example
+
+This example uses two express.js servers with the last of them using opossum for successful/failure responses. To test the example under heavy load the ab command from the fedora **httpd-tools** has been used.
+
+### Steps
+
+```sh
+$ npm install
+$ npm start
 ```
 
 Open a new terminal and run:
 
-```
-npm test
+```sh
+$ npm test
 ```
 
 The `ab` command required for this example. This is part of `httpd-tools` in fedora.
