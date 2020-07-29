@@ -1,0 +1,15 @@
+{
+  "name": "timeout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_DEBUG=dbg-* node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "opossum": "github:nodeshift/opossum#debug"
+  }
+}
