@@ -7,14 +7,17 @@ const delay = (delay) =>
     }, delay);
   });
 
-const options = {};
+const breaker = new CircuitBreaker(delay);
 
-const breaker = new CircuitBreaker(delay, options);
-
-function go() {
-  return breaker.fire(20000) // opossum default timeout is 10 sec
-    .then(_ => breaker.stats)
-    .catch(error => console.error(error))
-}
-
-go();
+breaker
+  .fire(20000) // opossum default timeout is 10 sec
+  .then((_) => {})
+  .catch((error) => {
+    console.error(error);
+    console.log(
+      'fires',
+      breaker.stats.fires,
+      'timeouts',
+      breaker.stats.timeouts
+    );
+  });

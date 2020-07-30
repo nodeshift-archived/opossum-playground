@@ -7,14 +7,16 @@ const delay = (delay) =>
     }, delay);
   });
 
-const options = {};
+const breaker = new CircuitBreaker(delay);
 
-const breaker = new CircuitBreaker(delay, options);
-
-function go() {
-  return breaker.fire(100)
-    .then(_ => breaker.stats)
-    .catch(error => console.error(error))
-}
-
-go();
+breaker
+  .fire(100)
+  .then((_) => {
+    console.log(
+      'fires',
+      breaker.stats.fires,
+      'successes',
+      breaker.stats.successes
+    );
+  })
+  .catch((error) => console.error(error));
