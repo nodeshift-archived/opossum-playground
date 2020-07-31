@@ -1,20 +1,24 @@
 const CircuitBreaker = require('opossum');
 
-const throwError = () => new Promise((_, reject) => {
-  reject('Something went wrong!');
+let count = 0;
+
+const throwErrorSometimes = () => new Promise((resolve, reject) => {
+  if (++count % 2) return reject('Something went wrong!');
+  resolve('It works!');
 });
 
-const breaker = new CircuitBreaker(throwError, { resetTimeout: 5000 });
+const breaker = new CircuitBreaker(throwErrorSometimes, { resetTimeout: 5000 });
 
 const fireOpossum = () => {
   breaker
   .fire(100)
-  .then((_) => {
+  .then((result) => {
     console.log(
       'fires',
       breaker.stats.fires,
       'successes',
-      breaker.stats.successes
+      breaker.stats.successes,
+      result
     );
   })
   .catch((error) => console.error(error));
