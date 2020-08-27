@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 async function mysqlQuery(query) {
   const db = makeDb();
   try {
-    await db.query(query);
+    return await db.query(query);
   } catch (err) {
     console.error(err);
   } finally {
