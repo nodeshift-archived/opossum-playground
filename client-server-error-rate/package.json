@@ -1,0 +1,14 @@
+{
+  "name": "client-server-error-rate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_DEBUG=dbg-core* node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "opossum": "github:nodeshift/opossum#debug"
+  }
+}
