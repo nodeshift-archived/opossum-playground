@@ -19,9 +19,11 @@ const options = {
 };
 ```
 
-Where each 20ms opossum will consider it a timeout failure.
+Where:
 
-The reset timeout which interfere in hal-open is 5ms.
+**timeout**: refers to the amount of time opossum will wait for a function's execution before declares it as failure.
+
+**resetTimeout**: the amount of time that needs to pass in order opossum to change the state from failure (meaning fast-fail) to half-open (meaning try-again-and-see).
 
 And we have a `(Math.floor(Math.random() * Math.floor(25))` to 
 generate something between 0 and 25 to be added as delay for a function that simulates a delay.
