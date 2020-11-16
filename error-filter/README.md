@@ -31,7 +31,10 @@ The client consists of a simple node.js module making a request for each of the 
 
 ```
 $ npm start
+```
 
+Open another terminal
+```
 $ npm run client
 ```
 
