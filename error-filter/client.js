@@ -6,7 +6,8 @@ function makeRequest(path = '') {
 }
 
 const breaker = new CircuitBreaker(makeRequest, {
-  errorFilter: (err) => {
+  errorFilter: (err, path) => {
+    console.log('Trying to access this path:', path);
     return err.response.status === 404;
   },
 });
