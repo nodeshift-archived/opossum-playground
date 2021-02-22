@@ -30,7 +30,7 @@ const breaker = new CircuitBreaker(mysqlQuery, options);
 
 app.get('/', (req, res) => {
   breaker
-    .fire('SELECT SLEEP(101)')
+    .fire('DO SLEEP(11)')
     .then((result) => {
       result += `success: ${breaker.stats.successes}`;
       res.send(result);
